@@ -1,0 +1,35 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/especialidade">Especialidade</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">{{indicate}}</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Registo de Especialidade</h3>
+                <p>Dados da especialidade</p>
+                <form method="POST">
+                    <div class="row">
+                        <div class="column">
+                            <label>Especialidade</label>
+                            <input type="text" value="{{especialidade}}" name="text_especialidade" placeholder="Digite a Especialidade" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">{{button}}</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

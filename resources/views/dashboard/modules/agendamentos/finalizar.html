@@ -1,0 +1,106 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="#">Agendamento</a></li>
+            <li class="divider">/</li>
+            <li><a href="#">Agendar</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">{{indicate}}</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Registo de paciente</h3>
+                <p>Dados do paciente</p>
+                
+                <div class="record-header">
+                    <div class="browse" style="margin-left: -18px; width: 34%;">
+                       <input style="width: 100%;" type="text" id="search_paciente" placeholder="Pesquisar Paciente" class="record-search">
+                    </div>
+                </div>
+                <form method="POST">
+                    <input type="text"  id="id_paciente" name="codigo_paciente" hidden>  
+                    <div class="row">
+                        <div class="column">
+                            <label>Nome completo</label>
+                            <input type="text"  id="nome_paciente" placeholder="Nome do paciente" readonly>
+                        </div>
+                        <div class="column">
+                            <label>Idade</label>
+                            <input type="text" id="data_paciente" placeholder="Idade do Paciente"    readonly>
+                        </div>
+                        <div class="column">
+                            <label>Email</label>
+                            <input type="text" placeholder="Email do paciente"  id="email_paciente" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Telefone</label>
+                            <input type="number" placeholder="Telefone do paciente"  id="telefone_paciente" readonly>
+                        </div>
+                        <div class="column">
+                            <label>Genero</label>
+                            <input type="text" placeholder="Genero do paciente" id="genero" readonly>
+                        </div>
+                        <div class="column">
+                            <label>Provincia</label>
+                            <input type="text" placeholder="Provincia de Residencia"  id="provincia" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Distrito</label>
+                            <input type="text" placeholder="Distrito de Residencia"  id="distrito" readonly>
+                        </div>
+                        <div class="column">
+                            <label>Bairro</label>
+                            <input type="text" placeholder="Bairro do paciente"  id='bairro' readonly>
+                        </div>
+                        <div class="column">
+                            <label>Estado Civil</label>
+                            <input type="text" placeholder="Estado Civil"  id='estado' readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>ID telegram</label>
+                            <input type="text"  id="id_chat" placeholder="Telegram"  readonly>
+                        </div>
+                        <div class="column">
+                            <label>Data de consulta</label>
+                            <input type="{{date}}" value="{{data_consulta}}"  name="data_agendamento"  readonly>
+                        </div>
+                        <div class="column">
+                            <label>Horario agendado</label>
+                            <input type="text" placeholder="Email do paciente" name="horario_agendamento" value="{{horario}}" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Sintomas</label>
+                            <textarea rows="5" name='sintomas' placeholder="Digite os sintomas aqui separando por virgulas" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">{{button}}</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>
+
+<script>
+
+
+</script>
+

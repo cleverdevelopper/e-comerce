@@ -1,0 +1,50 @@
+{{status}}
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Dashboard</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Utilizadores</a></li>
+        </ul>
+        <div class="info-data">
+            <div class="records table-responsive">
+
+                <div class="record-header">
+                    <div class="browse">
+                       <input type="search" placeholder="Search" class="record-search">
+                        <select name="" id="">
+                            <option value="">Status</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <th>#Codigo</th>
+                                <th><span class="las la-sort"></span> Utilizador</th>
+                                <th><span class="las la-sort"></span> Nome Completo</th>
+                                <th><span class="las la-sort"></span> Grupo Pertecente</th>
+                                <th><span class="las la-sort"></span> Status</th>
+                                <th><span class="las la-sort"></span> Accoes</th>
+                                <th><span class="las la-sort"></span> Activo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{itens}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        <div class="data">
+            {{pagination}}
+        </div>
+    </main>
+    <!-- MAIN -->
+</section>

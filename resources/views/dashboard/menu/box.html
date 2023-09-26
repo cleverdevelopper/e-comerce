@@ -1,0 +1,25 @@
+<section id="sidebar">
+    <a href="{{URL}}/dashboard" class="brand"><i class='ri-pulse-line icon'></i> cmedico</a>
+    <ul class="side-menu">
+        <li><a href="{{URL}}/dashboard" class="active"><i class='ri-dashboard-line icon' ></i> Painel Inicial</a></li>
+        <li>
+            <a href="#"><i class='ri-calendar-2-line icon' ></i> Recepcao <i class='ri-arrow-down-s-line icon-right' ></i></a>
+            <ul class="side-dropdown">
+                <li><a href="{{URL}}/agendamento">Agendamento</a></li>
+            </ul>
+        </li>
+        {{clinica}}
+        {{farmacia}}
+        <li>
+            <a href="#"><i class='ri-flask-line icon' ></i> Relatorios <i class='ri-arrow-down-s-line icon-right' ></i></a>
+            <ul class="side-dropdown">
+                <li><a href="#">R. Pacientes</a></li>
+                <li><a href="#">R. Farmácia</a></li>
+                <li><a href="#">R. consultas</a></li>
+                <li><a href="#">R. medicamentos</a></li>
+            </ul>
+        </li>
+        {{administracao}}
+    </ul>
+</section>
+<!-- SIDEBAR -->

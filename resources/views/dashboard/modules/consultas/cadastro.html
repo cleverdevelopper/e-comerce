@@ -1,0 +1,110 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/pacientes">Pacientes</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">{{indicate}}</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Registo de paciente</h3>
+                <p>Dados do paciente</p>
+                <div class="right-button" style="justify-content: flex-start; margin-bottom: 1rem;">
+                    <div class="add">
+                        <a href="{{URL}}/pacientes/cadastrar">Bot telegram</a>
+                    </div>
+                </div>
+                <form method="POST">
+                    <div class="row">
+                        <div class="column">
+                            <label>Nome completo</label>
+                            <input type="text" name="nome_paciente" placeholder="Nome do paciente" value="{{nome_paciente}}" required>
+                        </div>
+                        <div class="column">
+                            <label>Data e ano de nascimento</label>
+                            <input type="{{date}}" value="{{data_paciente}}"  name="data_paciente"  required>
+                        </div>
+                        <div class="column">
+                            <label>Email</label>
+                            <input type="text" placeholder="Email do paciente" name="email_paciente" value="{{email_paciente}}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Telefone</label>
+                            <input type="number" placeholder="Telefone do paciente" name="telefone_paciente" value="{{telefone_paciente}}" required>
+                        </div>
+                        <div class="column">
+                            <label>Genero</label>
+                            <select required name="genero_paciente">
+                                <option>{{genero_paciente}}</option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                        </div>
+                        <div class="column">
+                            <label>Provincia</label>
+                            <select required name="provincia_paciente">
+                                <option>{{provincia_paciente}}</option>
+                                <option>Maputo</option>
+                                <option>Gaza</option>
+                                <option>Inhambane</option>
+                                <option>Sofala</option>
+                                <option>Manica</option>
+                                <option>Zambezia</option>
+                                <option>Tete</option>
+                                <option>Nampula</option>
+                                <option>Niassa</option>
+                                <option>Cabo-delgado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Distrito</label>
+                                <select required name="distrito_paciente">
+                                    <option>{{distrito_paciente}}</option>
+                                    <option>Maputo</option>
+                                    <option>Gaza</option>
+                                    <option>Inhambane</option>
+                                    <option>Sofala</option>
+                                    <option>Manica</option>
+                                    <option>Zambezia</option>
+                                    <option>Tete</option>
+                                    <option>Nampula</option>
+                                    <option>Niassa</option>
+                                    <option>Cabo-delgado</option>
+                                </select>
+                        </div>
+                        <div class="column">
+                            <label>Bairro</label>
+                            <input type="text" placeholder="Bairro do paciente" name="bairro_paciente" value="{{bairro}}" required>
+                        </div>
+                        <div class="column">
+                            <label>Estado civil</label>
+                            <select required name="estado_paciente">
+                                <option>{{estado_paciente}}</option>
+                                <option>Solteiro</option>
+                                <option>Casado</option>
+                                <option>Divorciado</option>
+                                <option>Viuvo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">{{button}}</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

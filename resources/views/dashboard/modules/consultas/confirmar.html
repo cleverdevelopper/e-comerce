@@ -1,0 +1,44 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Confirmar</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Registo de paciente</h3>
+                <p>Dados do paciente</p>
+
+                <div class="data__confirmation">
+                    <label for="">Nome do paciente: <strong style="text-transform: uppercase;">{{nome_paciente}}</strong></label>
+                </div>
+                <div class="data__confirmation">
+                    <label for="">Data da consulta: <strong>{{data}}</strong></label>
+                </div>
+                <div class="data__confirmation">
+                    <label for="">Hora da consulta: <strong>{{horario}}</strong></label>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <label>Sintomas descritos pelo paciente: </label>
+                        <textarea rows="5" name='sintomas'>{{sintomas}}</textarea>
+                    </div>
+                </div>
+                <form method="POST">
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">{{button}}</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- MAIN -->
+</section>
+
+

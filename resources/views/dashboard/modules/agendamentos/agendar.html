@@ -1,0 +1,45 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/pacientes">Pacientes</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">{{indicate}}</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Agendamento do dia: {{dia}}</h3>
+                <p>Escolha um horario e faca o agendamento</p>
+                {{timestamp}}
+
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                    </div>
+                    <div class="modal-body">
+                    <p>Some text in the Modal Body</p>
+                    <p>Some other text...</p>
+                    </div>
+                    <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

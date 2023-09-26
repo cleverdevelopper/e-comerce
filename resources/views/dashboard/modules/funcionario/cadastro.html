@@ -1,0 +1,125 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/funcionario">Funcionarios</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">{{indicate}}</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Registo de funcionario</h3>
+                <p>Dados Pessoais</p>
+                <form method="POST">
+                    <div class="row">
+                        <div class="column">
+                            <label>Nome completo</label>
+                            <input type="text" name="nome_funcionario" placeholder="Nome do funcionario" value="{{nome_funcionario}}" required>
+                        </div>
+                        <div class="column">
+                            <label>Email</label>
+                            <input type="text" placeholder="Email do funcionario" name="email_funcionario" value="{{email_funcionario}}" required>
+                        </div>
+                        <div class="column">
+                            <label>Formacao</label>
+                            <input type="text" value="{{formacao_funcionario}}"  name="formacao_funcionario" placeholder="Formacao" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label style="font-size: 13px;">Especialidade de formacao</label>
+                            <select required name="especialidade_funcionario">
+                                <option value="{{especialidade_id}}">{{especialidade_editar}}</option>
+                                {{especialidade__item}}
+                            </select>
+                        </div>
+                        <div class="column">
+                            <label style="font-size: 13px;">Genero</label>
+                            <select required name="genero_funcionario">
+                                <option>{{genero_funcionario}}</option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Provincia</label>
+                            <select required name="provincia_funcionario">
+                                <option>{{provincia_funcionario}}</option>
+                                <option>Maputo</option>
+                                <option>Gaza</option>
+                                <option>Inhambane</option>
+                                <option>Sofala</option>
+                                <option>Manica</option>
+                                <option>Zambezia</option>
+                                <option>Tete</option>
+                                <option>Nampula</option>
+                                <option>Niassa</option>
+                                <option>Cabo-delgado</option>
+                            </select>
+                        </div>
+                        <div class="column">
+                            <label>Distrito</label>
+                            <select required name="distrito_funcionario">
+                                <option>{{distrito_funcionario}}</option>
+                                <option>Maputo</option>
+                                <option>Gaza</option>
+                                <option>Inhambane</option>
+                                <option>Sofala</option>
+                                <option>Manica</option>
+                                <option>Zambezia</option>
+                                <option>Tete</option>
+                                <option>Nampula</option>
+                                <option>Niassa</option>
+                                <option>Cabo-delgado</option>
+                            </select>
+                        </div>
+                        <div class="column">
+                            <label>Bairro</label>
+                            <input type="text" placeholder="Bairro do funcionario" name="bairro_funcionario" value="{{bairro}}" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Telefone</label>
+                            <input type="number" placeholder="Telefone do funcionario" name="telefone_funcionario" value="{{telefone_funcionario}}" required>
+                        </div>
+                        <div class="column">
+                            <label>Numero de casa</label>
+                            <input type="number" value="{{casa_funcionario}}"  name="casa_funcionario" placeholder="Numero de casa"  required>
+                        </div>
+                        <div class="column">
+                            <label>Utilizador</label>
+                                    <input type="text" value="{{utilizador_funcionario}}"  name="utilizador_funcionario" placeholder="Utilizador de login" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label style="font-size: 13px;">Senha</label>
+                            <input type="password" name="senha_funcionario" placeholder="Senha do funcionario" value="{{senha_funcionario}}" required>
+                        </div>
+                        <div class="column">
+                            <label style="font-size: 13px;">Grupo pertencente</label>
+                                        <select required name="grupo_funcionario">
+                                            <option value="{{grupos_id}}">{{grupos_editar}}</option>
+                                            {{grupo_funcionario}}
+                                        </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="nextBtn">
+                        <span class="btnText">{{button}}</span>
+                        <i class="ri-send-plane-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

@@ -1,0 +1,58 @@
+
+<div class="container">
+    <div class="container__login">
+        <div class="login__logo">
+           <div class="logo__info">
+                <h3>CMÉDICO</h3>
+                <p>Bem vindo ao sistema de gestão de Posto Médico</p>
+           </div>
+           <div class="logo">
+                <img src="resources/views/login/images/logo.png" alt="">
+           </div>
+           <div class="agendamento__link">
+                <p>Caso não seja funcionário <a href="#">Agende consulta</a></p>
+           </div>
+           <div class="circulos">
+                <div class="circulo__um"></div>
+                <div class="circulo__dois"></div>
+           </div>
+        </div>
+        <div class="login__form">
+            <div class="form__cicle__3">
+                <div class="cicle__4"></div>
+            </div>
+            <div class="form__box">
+                <h3>MEMBER LOGIN</h3>
+
+                <div class="form__group">
+                    <form method="POST">
+                        <div class="form__input">
+                            <div class="label">
+                                <label for="">Utilizador</label>
+                            </div>
+                            <input type="text" name="text_utilizador" autocomplete="off" autofocus placeholder="Utilizador" required>
+                        </div>
+                        <div class="form__input">
+                            <div class="label">
+                                <label for="">Senha</label>
+                            </div>
+                            <input type="password" name="text_password" placeholder="Senha" required>
+                        </div>
+                        <a href="{{URL}}/recuperar">Esqueceu sua senha?</a>
+                        <div class="form__buttons">
+                            <button type="submit" class="btn">
+                                ENTRAR
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="circulos">
+                <div class="circulo__um"></div>
+                <div class="circulo__dois"></div>
+           </div> 
+        </div>
+    </div>
+</div>
+
+{{status}}

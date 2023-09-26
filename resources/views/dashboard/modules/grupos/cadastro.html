@@ -1,0 +1,88 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/grupos">Grupos</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">{{indicate}}</a></li>
+        </ul>
+        
+        <div class="info-data">
+        <div class="data">
+            <div class="content-data">
+                <h3>Registo de paciente</h3>
+                <p>Dados do paciente</p>
+                <form method="POST">
+                    <div class="row">
+                        <div class="column">
+                            <label>Descricao do grupo</label>
+                            <input type="text" name="text_descricao" placeholder="Descrição do grupo de utilizadores" value="{{description}}" required>
+                        </div>
+                    </div>
+                    <h3>Administração</h3>
+                    <div class="records table-responsive">
+                        <div>
+                            <table width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Activo / Inativo</th>
+                                        <th><span class="las la-sort"></span> Permissao</th>
+                                        <th><span class="las la-sort"></span> Descricao</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{itemAdmin}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                <h3 style="margin: 1rem 0 .4rem 0;">Clinica</h3>
+                <div class="records table-responsive">
+                    <div>
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Activo / Inativo</th>
+                                    <th><span class="las la-sort"></span> Permissao</th>
+                                    <th><span class="las la-sort"></span> Descricao</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{itemClinica}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h3 style="margin: 1rem 0 .4rem 0;">Farmacia</h3>
+                <div class="records table-responsive">
+                    <div>
+                        <table width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Activo / Inativo</th>
+                                    <th><span class="las la-sort"></span> Permissao</th>
+                                    <th><span class="las la-sort"></span> Descricao</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{itemFarmacia}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <button type="submit" class="nextBtn" style="margin: 1rem 0 1rem 0;">
+                    <span class="btnText">{{button}}</span>
+                    <i class="ri-send-plane-2-fill"></i>
+                </button>
+            </form>
+        </div>
+        </div>
+    </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

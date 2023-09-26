@@ -1,0 +1,106 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/definicoes">Consultas</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Consultar</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Realizacao da consulta</h3>
+                <p>Dados de configuracoes</p>
+
+                <div class="nav__tab">
+                    <button class="navtab__button borda" onclick="openConfigs(event, 'email')"><i class="ri-user-line"></i> Dados do Paciente</button>
+                    <button class="navtab__button " onclick="openConfigs(event, 'senha_reset')"><i class="ri-history-line"></i> Historico</button>
+                </div>
+
+                <div id='email' class="navtab__config">
+                    <div class="data__confirmation">
+                        <label for="">Nome do paciente: <strong style="text-transform: uppercase;">{{nome_paciente}}</strong></label>
+                    </div>
+                    <div class="data__confirmation">
+                        <label for="">Data da consulta: <strong>{{data}}</strong></label>
+                    </div>
+                    <div class="data__confirmation">
+                        <label for="">Hora da consulta: <strong>{{horario}}</strong></label>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <label>Sintomas descritos pelo paciente: </label>
+                            <textarea rows="5" name='sintomas'>{{sintomas}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id='senha_reset' class="navtab__config" style="display: none">
+                    <div class="records table-responsive">
+                        <div>
+                            <table width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>#Consulta</th>
+                                        <th>Nome paciente</th>
+                                        <th>Data da consulta</th>
+                                        <th>O profissional de saude</th>
+                                        <th style="text-align: center;">Tratamento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{historico}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="consult">
+                    <form method="POST">
+                        <div class="row">
+                                <div class="column">
+                                    <label>Observacoes do clinico: </label>
+                                    <textarea rows="5" name='text_observacoes'></textarea>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <label>Diagnostico</label>
+                                <select required name="diagnostico__paciente">
+                                    {{diagnostico__item}}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <label>Tratamento</label>
+                                    <select required name="distrito_paciente">
+                                        <option>{{distrito_paciente}}</option>
+                                        <option>Maputo</option>
+                                        <option>Gaza</option>
+                                        <option>Inhambane</option>
+                                        <option>Sofala</option>
+                                        <option>Manica</option>
+                                        <option>Zambezia</option>
+                                        <option>Tete</option>
+                                        <option>Nampula</option>
+                                        <option>Niassa</option>
+                                        <option>Cabo-delgado</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="nextBtn">
+                            <span class="btnText">{{button}}</span>
+                            <i class="ri-send-plane-2-fill"></i>
+                        </button>
+                    </form> 
+                </div>   
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

@@ -1,0 +1,118 @@
+{{status}}
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/definicoes">Definições</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="content-data">
+                <h3>Configuracoes do sistema</h3>
+                <p>Dados de configuracoes</p>
+
+                <div class="nav__tab">
+                    <button class="navtab__button borda" onclick="openConfigs(event, 'email')"><i class="ri-mail-settings-line"></i> Configuração de email</button>
+                    <button class="navtab__button " onclick="openConfigs(event, 'senha_reset')"><i class="ri-lock-unlock-line"></i> Senha de reset</button>
+                    <button class="navtab__button " onclick="openConfigs(event, 'config_bot')"><i class="ri-telegram-line"></i> Configuração de Bot</button>
+                </div>
+
+                <div id='email' class="navtab__config">
+                    <form method="POST">
+                        <div class="row">
+                            <div class="column">
+                                <label>Email</label>
+                                <input type="email" name="text_email" value="{{email}}" placeholder="Email de confinguração" required>
+                            </div>
+                            <div class="column">
+                                <label>Senha do email</label>
+                                <input type="password" name="text_password" value="{{password}}" placeholder="Senha do email de configuração" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <label>HOST MAIL</label>
+                                <input type="text" name="text_host" value="{{host}}" placeholder="Hostmail" required>
+                            </div>
+                            <div class="column">
+                                <label>Porta SMTP</label>
+                                <input type="number" name="text_porta" value="{{porta}}" placeholder="Porta SMTP" required>
+                            </div>
+                            <div class="column">
+                                <div class="row">
+                                    <div class="fields__grup-2">
+                                        <div class="input-field-2">
+                                            <label>Protocolo SSL</label>
+                                            <div class="switch__button">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                           </div>
+                                        </div>
+                
+                                        <div class="input-field-2">
+                                            <label>Protocolo TLS</label>
+                                            <div class="switch__button">
+                                                <label class="switch">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="nextBtn">
+                            <span class="btnText">Cadastrar</span>
+                            <i class="ri-send-plane-2-fill"></i>
+                        </button>
+                    </form>
+                </div>
+                <div id='senha_reset' class="navtab__config" style="display: none">
+                    <form method="POST">
+                        <div class="row">
+                            <div class="column">
+                                <label>Senha de reset</label>
+                                <input type="password" name="text_senha" value="{{senha}}" placeholder="Digite a senha reset" required>
+                            </div>
+                            <div class="column">
+                                <label>Senha do email</label>
+                                <input type="password" name="text_senha_repeat" value="{{senha_reset}}" placeholder="Repita a senha de reset" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="nextBtn">
+                            <span class="btnText">Cadastrar</span>
+                            <i class="ri-send-plane-2-fill"></i>
+                        </button>
+                    </form>
+                </div>
+                <div id='config_bot' class="navtab__config" style="display: none">
+                    <form method="POST">
+                        <div class="row">
+                            <div class="column">
+                                <label>Token do bot</label>
+                                <input type="text" name="text_token" value="{{token}}" placeholder="Token do bot: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" required>
+                            </div>
+                            <div class="column">
+                                <label>Bot username</label>
+                                <input type="text" name="text_username" value="{{username}}" placeholder="Username do Bot" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="nextBtn">
+                            <span class="btnText">Cadastrar</span>
+                            <i class="ri-send-plane-2-fill"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- MAIN -->
+</section>

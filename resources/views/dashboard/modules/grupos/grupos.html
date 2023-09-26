@@ -1,0 +1,55 @@
+{{status}}
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Dashboard</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Grupo</a></li>
+        </ul>
+        <div class="right-button">
+            <div class="add">
+                <a href="{{URL}}/grupos/cadastrar">Adicionar Grupo</a>
+            </div>
+        </div>
+        <div class="info-data">
+            <div class="records table-responsive">
+
+                <div class="record-header">
+                    <div class="browse">
+                       <input type="search" placeholder="Search" class="record-search">
+                        <select name="" id="">
+                            <option value="">Status</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <table width="100%">
+                        <thead>
+                            <tr>
+                                <th>#Codigo</th>
+                                <th><span class="las la-sort"></span> Nome do grupo</th>
+                                <th><span class="las la-sort"></span> Data criacao</th>
+                                <th><span class="las la-sort"></span> Data Actualizacao</th>
+                                <th><span class="las la-sort"></span> Status</th>
+                                <th><span class="las la-sort"></span> Accoes</th>
+                                <th><span class="las la-sort"></span> Activo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{itens}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        <div class="data">
+            {{pagination}}
+        </div>
+    </main>
+    <!-- MAIN -->
+</section>

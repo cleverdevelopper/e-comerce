@@ -1,0 +1,346 @@
+<section id="content">
+    {{navbar}}
+    <!-- MAIN -->
+    <main>
+        <h4 class="title">Painel Inicial</h4>
+        <ul class="breadcrumbs">
+            <li><a href="{{URL}}">Painel Inicial</a></li>
+            <li class="divider">/</li>
+            <li><a href="{{URL}}/definicoes">Consultas</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Consultar</a></li>
+        </ul>
+        
+        <div class="data">
+            <div class="hero">
+                <div class="tabs">
+                    <button id="tab1">Anamnase <i class='ri-arrow-right-s-line icon-right'
+                            style="float: right;"></i></button>
+                    <button id="tab2">Prescricao <i class='ri-arrow-right-s-line icon-right'
+                            style="float: right;"></i></button>
+                    <button id="tab3">Pedidos de Exames <i class='ri-arrow-right-s-line icon-right'
+                            style="float: right;"></i></button>
+                    <button id="tab4">Laudos de Exames <i class='ri-arrow-right-s-line icon-right'
+                            style="float: right;"></i></button>
+                    <button id="tab5">Atestados <i class='ri-arrow-right-s-line icon-right'
+                            style="float: right;"></i></button>
+                    <button id="tab6">Imagens e documentos <i class='ri-arrow-right-s-line icon-right'
+                            style="float: right;"></i></button>
+                </div>
+                <div class="content-box">
+                    <div class="content-data">
+                        <form method="POST">
+                            <div class="" id="content1">
+                                <p>Dados do Paciente</p>
+                                <div class="data__confirmation">
+                                    <label for="">Nome do paciente: <strong style="text-transform: uppercase;">{{nome_paciente}}</strong></label>
+                                </div>
+                                <div class="data__confirmation">
+                                    <label for="">Idade: <strong>{{idade}}</strong></label>
+                                </div>
+                                <div class="data__confirmation">
+                                    <label for="">Genero: <strong>{{genero}}</strong></label>
+                                </div>
+                                <div class="data__confirmation">
+                                    <label for="">Sintomas descritos pelo paciente: <strong>{{sintomas}}</strong></label>
+                                </div>
+                                <hr class="first">
+                                <p>Introducao</p>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Queixa Principal (QP)</label>
+                                        <input type="text" id="name" placeholder="Queixa principal">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Historia da doenca actual (HDA)</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Historia da doenca actual"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Historia patologica progressa (HPP)</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Historia patologica progressa"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Historico Familiar</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Observacoes</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Observacoes"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Informacoes Gerais</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Informacoes gerais"></textarea>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p>Exame Fisico</p>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Cabeca/Pescoco</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                    <div class="column">
+                                        <label for="name">Torax</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Mmss</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                    <div class="column">
+                                        <label for="name">Abdome</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">MMII</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Informacoes Gerais</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Informacoes gerais"></textarea>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p>Sinais vitais</p>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">PA (mmhg)</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                    <div class="column">
+                                        <label for="name">FC (bpm)</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                    <div class="column">
+                                        <label for="name">FR (irpm)</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                    <div class="column">
+                                        <label for="name">TAX (oC)</label>
+                                        <input type="text" id="name" placeholder="Historico familia">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Informacoes Gerais</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Informacoes gerais"></textarea>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p>Hipotese de Diagnostico</p>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Informacoes Gerais</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Informacoes gerais"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Hipotese Diagnostica</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Informacoes gerais"></textarea>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p>Outros</p>
+                                <div class="row">
+                                    <div class="column">
+                                        <label for="name">Resumo do atendimento</label>
+                                        <textarea rows="3" type="text" id="name"
+                                            placeholder="Informacoes gerais"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="" id="content2">
+                                <p>Nova Prescricao</p>
+                                
+                            </div>
+                            <div class="" id="content3">
+                                content 3
+                            </div>
+                            <div class="" id="content4">
+                                content 4
+                            </div>
+                            <div class="" id="content5">
+                                content 5
+                            </div>
+                            <div class="" id="content6">
+                                content 6
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+    <!-- MAIN -->
+</section>
+<script>
+    var tab1 = document.getElementById('tab1');
+    var tab2 = document.getElementById('tab2');
+    var tab3 = document.getElementById('tab3');
+    var tab4 = document.getElementById('tab4');
+    var tab5 = document.getElementById('tab5');
+    var tab6 = document.getElementById('tab6');
+
+    var content1 = document.getElementById('content1');
+    var content2 = document.getElementById('content2');
+    var content3 = document.getElementById('content3');
+    var content4 = document.getElementById('content4');
+    var content5 = document.getElementById('content5');
+    var content6 = document.getElementById('content6');
+
+
+    tab1.onclick = function () {
+        content1.style.display = 'block';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+        content5.style.display = 'none';
+        content6.style.display = 'none';
+        tab1.style.background = "#1775F1";
+        tab2.style.background = "transparent";
+        tab3.style.background = "transparent";
+        tab4.style.background = "transparent";
+        tab5.style.background = "transparent";
+        tab6.style.background = "transparent";
+        tab1.style.color = "#fff";
+        tab2.style.color = "#000";
+        tab3.style.color = "#000";
+        tab4.style.color = "#000";
+        tab5.style.color = "#000";
+        tab6.style.color = "#000";
+
+    }
+
+    tab2.onclick = function () {
+        content1.style.display = 'none';
+        content2.style.display = 'block';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+        content5.style.display = 'none';
+        content6.style.display = 'none';
+        tab1.style.background = "transparent";
+        tab2.style.background = "#1775F1";
+        tab3.style.background = "transparent";
+        tab4.style.background = "transparent";
+        tab5.style.background = "transparent";
+        tab6.style.background = "transparent";
+        tab1.style.color = "#000";
+        tab2.style.color = "#fff";
+        tab3.style.color = "#000";
+        tab4.style.color = "#000";
+        tab5.style.color = "#000";
+        tab6.style.color = "#000";
+    }
+
+    tab3.onclick = function () {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'block';
+        content4.style.display = 'none';
+        content5.style.display = 'none';
+        content6.style.display = 'none';
+        tab1.style.background = "transparent";
+        tab2.style.background = "transparent";
+        tab3.style.background = "#1775F1";
+        tab4.style.background = "transparent";
+        tab5.style.background = "transparent";
+        tab6.style.background = "transparent";
+        tab1.style.color = "#000";
+        tab2.style.color = "#000";
+        tab3.style.color = "#fff";
+        tab4.style.color = "#000";
+        tab5.style.color = "#000";
+        tab6.style.color = "#000";
+    }
+
+    tab4.onclick = function () {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'block';
+        content5.style.display = 'none';
+        content6.style.display = 'none';
+        tab1.style.background = "transparent";
+        tab2.style.background = "transparent";
+        tab3.style.background = "transparent";
+        tab4.style.background = "#1775F1";
+        tab5.style.background = "transparent";
+        tab6.style.background = "transparent";
+        tab1.style.color = "#000";
+        tab2.style.color = "#000";
+        tab3.style.color = "#000";
+        tab4.style.color = "#fff";
+        tab5.style.color = "#000";
+        tab6.style.color = "#000";
+    }
+
+    tab5.onclick = function () {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+        content5.style.display = 'block';
+        content6.style.display = 'none';
+        tab1.style.background = "transparent";
+        tab2.style.background = "transparent";
+        tab3.style.background = "transparent";
+        tab4.style.background = "transparent";
+        tab5.style.background = "#1775F1";
+        tab6.style.background = "transparent";
+        tab1.style.color = "#000";
+        tab2.style.color = "#000";
+        tab3.style.color = "#000";
+        tab4.style.color = "#000";
+        tab5.style.color = "#fff";
+        tab6.style.color = "#000";
+    }
+
+    tab6.onclick = function () {
+        content1.style.display = 'none';
+        content2.style.display = 'none';
+        content3.style.display = 'none';
+        content4.style.display = 'none';
+        content5.style.display = 'none';
+        content6.style.display = 'block';
+        tab1.style.background = "transparent";
+        tab2.style.background = "transparent";
+        tab3.style.background = "transparent";
+        tab4.style.background = "transparent";
+        tab5.style.background = "transparent";
+        tab6.style.background = "#1775F1";
+        tab1.style.color = "#000";
+        tab2.style.color = "#000";
+        tab3.style.color = "#000";
+        tab4.style.color = "#000";
+        tab5.style.color = "#000";
+        tab6.style.color = "#fff";
+    }
+
+</script>
